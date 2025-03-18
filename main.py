@@ -133,14 +133,18 @@ def main(folder_path):
     cnpj = extrator_cnpj(folder_path, corte)
     if cnpj == False:
         corte_ajustado = corte.copy()
-        corte_ajustado['cnpj'] = corte['cnpj_ajustado']
+        corte_ajustado['cnpj'] = corte['cnpj']
         cnpj = extrator_cnpj(folder_path, corte_ajustado)
         if cnpj == False:    
-            corte_ajustado['cnpj'] = corte['cnpj_ajustado2']
+            corte_ajustado['cnpj'] = corte['cnpj_ajustado']
             cnpj = extrator_cnpj(folder_path, corte_ajustado)
             if cnpj == False:
-                corte_ajustado['cnpj'] = corte['cnpj_ajustado3']
+                corte_ajustado['cnpj'] = corte['cnpj_ajustado2']
                 cnpj = extrator_cnpj(folder_path, corte_ajustado)
+                if cnpj == False:
+                    corte_ajustado['cnpj'] = corte['cnpj_ajustado3']
+                    cnpj = extrator_cnpj(folder_path, corte_ajustado)
+                    
 
     # Extrair valor total
     valor_total = extrator_valor_total(folder_path, corte)

@@ -6,6 +6,7 @@ def corte_gasmig():
     'cnpj': (2155, 700, 2622, 800), #17/09
     'cnpj_ajustado': (2155, 500, 2622, 1200),
     'cnpj_ajustado2': (2155, 500, 2722, 2200), #17/09
+    'cnpj_ajustado3': (2155, 1100, 3222, 2400), #17/09
 
     'valor_total': (3120, 3780, 3432, 3950), #17/09
     'valor_total_ajustado':(),
